@@ -1,0 +1,104 @@
+/* App.css */
+
+.App {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  min-height: 100vh;
+  color: #fff;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.editor-container {
+  width: 80%;
+  max-width: 900px;
+  text-align: left;
+}
+
+textarea {
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  resize: vertical;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #2e2e2e;
+  color: #f8f8f2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  box-shadow: 0 0 8px 3px rgba(100, 255, 218, 0.5);
+}
+
+/* Optional: smooth transitions on smaller screens */
+@media (max-width: 600px) {
+  .editor-container {
+    width: 95%;
+  }
+
+  textarea {
+    height: 300px;
+  }
+}
+
+.CodeMirror {
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.language-selector {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.language-selector select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+  background-color: #444;
+  color: white;
+  outline: none;
+}
+.run-button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.run-button:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  transform: scale(1.03);
+}
+
+.run-button:disabled {
+  background: gray;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
